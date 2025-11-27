@@ -110,9 +110,9 @@ export default function HeroCarousel() {
 							priority
 							className="object-cover"
 						/>
-						<div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
+						<div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/55 to-black/20" />
 						{/* Accent vignette only on lg+ */}
-						<div className="pointer-events-none absolute inset-y-10 left-6 right-6 translate-y-4 rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/5 via-transparent to-[#447f80]/10 lg:left-10 lg:right-1/3 lg:rounded-[3rem] lg:block hidden" />
+						<div className="pointer-events-none absolute inset-y-10 left-6 right-6 translate-y-4 rounded-[2.5rem] border border-white/10 bg-linear-to-br from-white/5 via-transparent to-[#447f80]/10 lg:left-10 lg:right-1/3 lg:rounded-[3rem] lg:block hidden" />
 					</div>
 
 					{/* Content */}
@@ -165,13 +165,13 @@ export default function HeroCarousel() {
 							</div>
 
 							<div className="flex flex-wrap items-center gap-3 pt-3 text-[0.68rem] text-slate-200/80 sm:text-[0.72rem]">
-								<div className="h-px w-10 bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+								<div className="h-px w-10 bg-linear-to-r from-transparent via-white/50 to-transparent" />
 								<p>Homes · Apartments · Commercial Interiors across AP & TS</p>
 							</div>
 						</div>
 
 						{/* Right: Floating cards (md+) */}
-						<div className="relative hidden h-[260px] flex-1 items-center justify-center md:flex lg:h-[320px]">
+						<div className="relative hidden h-[260px] flex-1 items-center justify-center md:flex lg:h-[280px]">
 							{/* Top card */}
 							<motion.div
 								initial={{ opacity: 0, y: -10, x: 40 }}
@@ -192,14 +192,14 @@ export default function HeroCarousel() {
 									boxShadow: "0 24px 70px rgba(0,0,0,0.7)",
 									borderColor: ACCENT,
 								}}
-								className="relative h-44 w-64 overflow-hidden rounded-[24px] border border-white/40 bg-black/40 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md sm:h-48 sm:w-72 lg:h-52 lg:w-80">
+								className="relative h-44 w-64 overflow-hidden rounded-3xl border border-white/40 bg-black/40 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md sm:h-48 sm:w-72 lg:h-52 lg:w-80">
 								<Image
 									src={current.card1.image}
 									alt={current.card1.label}
 									fill
 									className="object-cover"
 								/>
-								<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+								<div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
 								<div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-black/70 px-3 py-1 text-[0.7rem] font-medium">
 									<span className="h-1.5 w-1.5 rounded-full bg-[#d1f3f2]" />
 									<span>{current.card1.label}</span>
@@ -233,7 +233,7 @@ export default function HeroCarousel() {
 									fill
 									className="object-cover"
 								/>
-								<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+								<div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/10 to-transparent" />
 								<div className="absolute bottom-3 left-3 flex items-center gap-2 rounded-full bg-black/70 px-3 py-1 text-[0.7rem] font-medium">
 									<span className="h-1.5 w-1.5 rounded-full bg-[#d1f3f2]" />
 									<span>{current.card2.label}</span>

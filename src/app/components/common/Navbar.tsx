@@ -89,10 +89,12 @@ export default function Navbar() {
 										<span
 											className={`transition-colors ${
 												isActive
-													? ""
+													? solidBackground
+														? "text-slate-900"
+														: "text-white"
 													: solidBackground
-													? "group-hover:text-[#447f80]"
-													: "group-hover:text-slate-100"
+													? "text-slate-900 group-hover:text-[#447f80]"
+													: "text-white group-hover:text-slate-100"
 											}`}>
 											{link.label}
 										</span>
