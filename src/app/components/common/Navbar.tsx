@@ -43,7 +43,7 @@ export default function Navbar() {
 				initial={{ y: -24, opacity: 0 }}
 				animate={{ y: 0, opacity: 1 }}
 				transition={{ type: "spring", stiffness: 120, damping: 18 }}
-				className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:h-24 lg:px-8">
+				className="mx-auto flex h-16 max-w-screen items-center justify-between px-4 sm:h-20 sm:px-6 lg:h-24 lg:px-8">
 				{/* Logo */}
 				<Link
 					href="/"
@@ -54,7 +54,7 @@ export default function Navbar() {
 						whileTap={{ scale: 0.98 }}
 						className="relative flex h-10 w-28 items-center justify-start sm:h-12 sm:w-32 md:h-16 md:w-40">
 						<div className="absolute inset-0 rounded-3xl bg-[#447f80]/10 blur-xl group-hover:bg-[#447f80]/20 transition-all" />
-						<div className="relative h-full w-full flex items-center justify-start">
+						<div className="relative flex h-full w-full items-center justify-start">
 							<Image
 								src="https://res.cloudinary.com/djthwunnh/image/upload/v1764150280/logo-web-1_miqcdh.png"
 								alt="Kasa Interiors Logo"
@@ -136,7 +136,7 @@ export default function Navbar() {
 				{/* Mobile Menu Button */}
 				<button
 					type="button"
-					className="relative flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 shadow-sm lg:hidden"
+					className="relative z-60 flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-900 shadow-sm lg:hidden"
 					onClick={() => setMenuOpen((prev) => !prev)}
 					aria-label="Toggle navigation menu">
 					<AnimatePresence mode="wait">
@@ -173,8 +173,9 @@ export default function Navbar() {
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: -10 }}
 						transition={{ duration: 0.25 }}
-						className="lg:hidden">
-						<div className="border-t border-slate-200 bg-white/98 backdrop-blur-xl">
+						// 👇 fixed overlay, always visible on small screens
+						className="fixed inset-x-0 top-16 sm:top-20 z-40 lg:hidden">
+						<div className="max-h-[calc(100vh-4.5rem)] overflow-y-auto border-t border-slate-200 bg-white/98 backdrop-blur-xl">
 							<nav className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
 								<ul className="flex flex-col gap-2">
 									{navLinks.map((link, idx) => {

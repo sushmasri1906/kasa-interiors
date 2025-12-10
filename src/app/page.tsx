@@ -18,7 +18,7 @@ function page() {
 			<WhyChooseKasa />
 			<WhyKasa />
 			<Reviews />
-			<BrandsWeUse />
+			{/* <BrandsWeUse /> */}
 		</>
 	);
 }
