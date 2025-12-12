@@ -6,7 +6,10 @@ import Reviews from "./components/Home/Reviews";
 import WhyChooseKasa from "./components/Home/WhyChooseUs";
 import HowItWorks from "./components/Home/HowItWorks";
 import WhyKasa from "./components/Home/whyKasa";
-import BrandsWeUse from "./components/Home/BrandsWeUse";
+import Steps from "./components/Home/Steps";
+// import BrandsWeUse from "./components/Home/BrandsWeUse";
+import InteriorSolutions from "./components/Home/InteriorSolutions";
+import FeaturedProjects from "./components/project/FeaturedProjects";
 
 function page() {
 	return (
@@ -16,7 +19,10 @@ function page() {
 			<CoveredFields />
 			<HowItWorks />
 			<WhyChooseKasa />
+			<Steps />
+			<InteriorSolutions />
 			<WhyKasa />
+			<FeaturedProjects />
 			<Reviews />
 			{/* <BrandsWeUse /> */}
 		</>

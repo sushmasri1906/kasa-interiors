@@ -239,7 +239,8 @@ const navLinks = [
 	{ href: "/", label: "Home" },
 	{ href: "/about", label: "About" },
 	{ href: "/services", label: "Services" },
-	{ href: "/gallery", label: "Gallery" },
+	{ href: "/projects", label: "Projects" },
+	// { href: "/gallery", label: "Gallery" },
 	{ href: "/contact", label: "Contact" },
 ];
 
@@ -478,7 +479,7 @@ export default function Navbar() {
 						animate={{ opacity: 1 }}
 						exit={{ opacity: 0 }}
 						transition={{ duration: 0.25 }}
-						className="fixed inset-0 z-[70] flex items-center justify-center px-4 py-8 sm:px-6">
+						className="fixed inset-0 z-70 flex items-center justify-center px-4 py-8 sm:px-6">
 						{/* Backdrop with blur */}
 						<div
 							className="absolute inset-0 bg-slate-900/45 backdrop-blur-md"
@@ -492,7 +493,7 @@ export default function Navbar() {
 							transition={{ duration: 0.28, ease: [0.23, 1, 0.32, 1] }}
 							role="dialog"
 							aria-modal="true"
-							className="relative z-[75] w-full max-w-lg rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-[0_24px_70px_rgba(15,23,42,0.28)] sm:p-8">
+							className="relative z-75 w-full max-w-lg rounded-3xl border border-slate-200 bg-white/95 p-6 shadow-[0_24px_70px_rgba(15,23,42,0.28)] sm:p-8">
 							{/* Close button */}
 							<button
 								type="button"

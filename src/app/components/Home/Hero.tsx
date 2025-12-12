@@ -32,7 +32,7 @@ const slides = [
 		subtitle:
 			"Elegant workspaces & commercial interiors that elevate your brand.",
 		image:
-			"https://res.cloudinary.com/dgulr1hgd/image/upload/v1765360507/9_ospur0.jpg",
+			"https://res.cloudinary.com/dwsm6i6z9/image/upload/v1765433919/Int-Gallery-6_itxrkt.jpg",
 	},
 ];
 
@@ -107,7 +107,7 @@ export default function HeroBanner() {
 									className="object-cover"
 								/>
 								{/* dark overlay for text readability */}
-								<div className="absolute inset-0 bg-black/40" />
+								{/* <div className="absolute inset-0 bg-black/40" />x	 */}
 							</div>
 						</div>
 					))}
@@ -135,19 +135,16 @@ export default function HeroBanner() {
 							initial="hidden"
 							animate="visible"
 							exit="exit"
-							className="max-w-xl text-left">
+							className="relative max-w-xl text-left p-5 rounded-2xl overflow-hidden">
 							<p className="mb-3 text-[0.75rem] font-semibold uppercase tracking-[0.3em] text-white drop-shadow-lg">
 								Kasa Interiors
 							</p>
-
 							<h1 className="text-3xl font-bold leading-tight text-white drop-shadow-2xl sm:text-4xl md:text-5xl lg:text-6xl">
 								{current.title}
 							</h1>
-
 							<p className="mt-4 max-w-lg text-sm text-white/90 drop-shadow-md sm:text-base md:text-lg">
 								{current.subtitle}
 							</p>
-
 							<Link href="/gallery">
 								<motion.button
 									whileHover={{ scale: 1.05 }}
@@ -156,6 +153,8 @@ export default function HeroBanner() {
 									See Our Latest Makeovers →
 								</motion.button>
 							</Link>
+							{/* dark overlay for text readability */}
+							<div className="absolute inset-0 bg-black/5" />
 						</motion.div>
 					)}
 				</AnimatePresence>
